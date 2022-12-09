@@ -8,6 +8,8 @@ public class GameManagement : MonoBehaviour
     public static GameManagement manager;
     public float playerMaxHealth = 100;
     public float playerHealth;
+    public float filterLife;
+    public float filterMax = 100;
 
 
     void Awake(){
@@ -19,6 +21,8 @@ public class GameManagement : MonoBehaviour
             Destroy(gameObject);
         }
      playerHealth = playerMaxHealth;
+     filterMax = 100;
+     filterLife = filterMax;
 
     }
 
