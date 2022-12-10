@@ -27,7 +27,7 @@ public class toxicZone : MonoBehaviour
             if (filterDrain== null){
                 filterDrain = StartCoroutine (FilterDrain());
             } 
-            if (GameManagement.manager.filterLife <= 0 && toxicAttack == null){
+            if (GameManagement.manager.filterLife <= 0 && toxicAttack == null && GameManagement.manager.playerHealth > 0){
                 toxicAttack = StartCoroutine (ToxicAttack());
             }
         }
