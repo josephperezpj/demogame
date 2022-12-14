@@ -10,6 +10,7 @@ public class GameManagement : MonoBehaviour
     public float playerHealth;
     public float filterLife;
     public float filterMax = 100;
+    public bool toxic;
 
 
     void Awake(){
@@ -23,6 +24,7 @@ public class GameManagement : MonoBehaviour
      playerHealth = playerMaxHealth;
      filterMax = 100;
      filterLife = filterMax;
+     toxic = false;
 
     }
 

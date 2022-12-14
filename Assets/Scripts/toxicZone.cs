@@ -64,6 +64,7 @@ public class toxicZone : MonoBehaviour
             tcam.SetActive(true);
             vcam.SetActive(false);
 			_playerInRange = true;
+            GameManagement.manager.toxic = true;
 		    filter = collider.gameObject.GetComponent<playerFilter>();
             health = collider.gameObject.GetComponent<PlayerHealth>();
 	
@@ -76,6 +77,7 @@ public class toxicZone : MonoBehaviour
             vcam.SetActive(true);
             tcam.SetActive(false);
 			_playerInRange = false;
+            GameManagement.manager.toxic = false;
 		    filter= null;
             health= null;
 	

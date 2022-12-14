@@ -12,7 +12,9 @@ public class PlayerMovement : MonoBehaviour
 
     Animator animator;
 
-    public float runSpeed = 10.0f;
+    public float speed = 10.0f;
+    public float walkSpeed = 4.0f;
+    public float toxicSpeedMultiplier = .8f;
     public bool canMove;
     private bool _dead = false;
 
@@ -31,6 +33,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+
+        if (GameManagement.manager.filterLife <= 0 && GameManagement.manager.toxic == true){
+            speed = walkSpeed * toxicSpeedMultiplier;
+        }
+        else{
+            speed = walkSpeed;
+        }
 
         if( !_dead){
         if(DialogueManager.GetInstance().dialogueIsPlaying){
@@ -74,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
                 vertical *= moveLimiter;
             }
 
-            body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+            body.velocity = new Vector2(horizontal * speed, vertical * speed);
         }
 
         if (canMove == false)
