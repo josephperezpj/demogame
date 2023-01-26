@@ -14,16 +14,28 @@ public class toxicZone : MonoBehaviour
     private Coroutine filterDrain;
     [SerializeField] private float _drain;
     [SerializeField] private float _attack;
+    private bool _geigerAudio;
 
     void Start()
     {
         _playerInRange = false;
+        _geigerAudio = false;
     }
 
     void Update (){
 
-        if (_playerInRange){
 
+
+
+        if (_playerInRange)
+        {
+
+
+            if (!_geigerAudio)
+            {
+                _geigerAudio = true;
+                AudioManager.instance.Play("Geiger");
+            }
             if (filterDrain== null){
                 filterDrain = StartCoroutine (FilterDrain());
             } 
@@ -34,6 +46,21 @@ public class toxicZone : MonoBehaviour
         else {
             StopCoroutine(FilterDrain());
             StopCoroutine(ToxicAttack());
+        }
+
+
+        if (GameManagement.manager.playerHealth <= 0)
+        {
+           
+            _playerInRange=false;
+        }
+
+
+        if (_geigerAudio && !_playerInRange)
+        {
+            _geigerAudio = false;
+            AudioManager.instance.Stop("Geiger");
+            Debug.Log("Stop Geiger Audio");
         }
 
     }
