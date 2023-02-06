@@ -3918,18 +3918,27 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: de284565c2b416642bb67eca934c8243, type: 3}
     volume: 1
     volumeVariance: 0
-    pitch: 0
-    pitchVariance: 0
-    loop: 1
+    pitch: 1
+    pitchVariance: 0.027
+    loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: BGM
     clip: {fileID: 8300000, guid: 3dfdd58416b94224bbd7cfd10fe6a394, type: 3}
-    volume: 0
+    volume: 0.086
     volumeVariance: 0
-    pitch: 0
+    pitch: 1
     pitchVariance: 0
-    loop: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Geiger
+    clip: {fileID: 8300000, guid: 3e750ed2ea7240c45b2c85bf06505d3e, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
 --- !u!4 &916751210
@@ -3979,6 +3988,14 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4205905471501903365, guid: d925795b245c9034eb4fa1c1b39cf503, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205905471501903365, guid: d925795b245c9034eb4fa1c1b39cf503, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205905471501903365, guid: d925795b245c9034eb4fa1c1b39cf503, type: 3}
       propertyPath: m_LocalPosition.x
       value: -46.03
       objectReference: {fileID: 0}
@@ -4018,6 +4035,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4205905471501903366, guid: d925795b245c9034eb4fa1c1b39cf503, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205905471501903366, guid: d925795b245c9034eb4fa1c1b39cf503, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205905471501903366, guid: d925795b245c9034eb4fa1c1b39cf503, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205905471501903366, guid: d925795b245c9034eb4fa1c1b39cf503, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205905471501903366, guid: d925795b245c9034eb4fa1c1b39cf503, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205905471501903366, guid: d925795b245c9034eb4fa1c1b39cf503, type: 3}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4410282343860915290, guid: d925795b245c9034eb4fa1c1b39cf503, type: 3}
       propertyPath: filterBar
       value: 
@@ -4034,6 +4075,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 2767175}
+    - target: {fileID: 5588001308758077431, guid: d925795b245c9034eb4fa1c1b39cf503, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 1902837988}
     - target: {fileID: 7407995061101821215, guid: d925795b245c9034eb4fa1c1b39cf503, type: 3}
       propertyPath: pManager
       value: 
@@ -4560,6 +4605,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!212 &1902837988 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4205905471501903366, guid: d925795b245c9034eb4fa1c1b39cf503, type: 3}
+  m_PrefabInstance: {fileID: 949388900}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1924933287
 GameObject:
   m_ObjectHideFlags: 0
@@ -8225,6 +8275,14 @@ PrefabInstance:
       propertyPath: vcam
       value: 
       objectReference: {fileID: 33100847}
+    - target: {fileID: 8621551227285437338, guid: b5abfc4361063764999b50570eaed237, type: 3}
+      propertyPath: _drain
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8621551227285437338, guid: b5abfc4361063764999b50570eaed237, type: 3}
+      propertyPath: _attack
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8621551227285437339, guid: b5abfc4361063764999b50570eaed237, type: 3}
       propertyPath: m_RootOrder
       value: 13
